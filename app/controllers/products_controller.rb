@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    byebug
+    
   end
 
   def new
@@ -45,6 +45,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.expect(product: [ :name ])
-    end
+      params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
+  end
 end

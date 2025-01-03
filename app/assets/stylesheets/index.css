@@ -1,0 +1,70 @@
+/* Tiêu đề */
+h1 {
+    text-align: center; /* Căn giữa tiêu đề */
+    font-size: 2.5rem; /* Kích thước lớn */
+    color: #000000; /* Màu xanh lam */
+    margin-top: 20px; /* Khoảng cách trên */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+  }
+  
+  /* Liên kết */
+  a {
+    color: #007bff; /* Màu xanh lam cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Thêm gạch chân khi rê chuột */
+  }
+  
+  /* Phần chứa sản phẩm */
+  #products {
+    display: grid; /* Sử dụng grid để xếp các sản phẩm */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cột linh hoạt */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    padding: 20px; /* Khoảng cách bên trong container */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    margin: auto; /* Căn giữa container */
+  }
+  
+  /* Từng sản phẩm */
+  #products div {
+    background-color: #fff; /* Nền trắng */
+    padding: 15px; /* Khoảng cách bên trong hộp sản phẩm */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ nhẹ */
+    border-radius: 8px; /* Bo tròn các góc */
+    text-align: center; /* Canh giữa nội dung */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng khi rê chuột */
+  }
+  
+  #products div:hover {
+    transform: translateY(-5px); /* Nâng lên nhẹ khi rê chuột */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ đậm hơn */
+  }
+  
+  /* Tên sản phẩm */
+  #products div a {
+    font-size: 1.2rem; /* Tăng kích thước chữ */
+    font-weight: bold; /* In đậm tên sản phẩm */
+    color: #ff6397; /* Màu xanh lam */
+  }
+  
+  #products div a:hover {
+    color: #0056b3; /* Xanh đậm hơn khi rê chuột */
+  }
+  
+  /* Responsive (tương thích với màn hình nhỏ) */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem; /* Giảm kích thước tiêu đề */
+    }
+  
+    #products {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cột nhỏ hơn */
+    }
+  
+    #products div {
+      padding: 10px; /* Giảm khoảng cách trong hộp sản phẩm */
+    }
+  }
+  

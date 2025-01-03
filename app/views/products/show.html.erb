@@ -1,5 +1,12 @@
 <h1><%= @product.name %></h1>
-
+<% cache @product do %>
+    has_one_attached :featured_image
+    <h1><%= @product.name %></h1>
+    <%= @product.description %>
+  <% end %>  
+<%= image_tag @product.featured_image if @product.featured_image.attached? %>
+<%= render "inventory", product: @product %>
+<link rel="stylesheet" href="./assets/stylesheets/show.css">
 <%= link_to "Back", products_path %>
 <%= link_to "Edit", edit_product_path(@product) %>
 <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>

@@ -1,8 +1,10 @@
 <h1>Products</h1>
+<h1><%= t "hello" %></h1>
+<h1><%= t ".title" %></h1>
 
 <%= link_to "New product", new_product_path if authenticated?%>
 <%= link_to "Login", new_session_path unless authenticated? %>
-
+<link rel="stylesheet" href="./assets/stylesheets/index.css">
 
 <div id="products">
   <% @products.each do |product| %>

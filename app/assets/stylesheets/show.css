@@ -1,0 +1,23 @@
+/* Kiểu cho phần tử ảnh sản phẩm */
+.product img {
+    max-width: 150px;  /* Giới hạn chiều rộng của ảnh */
+    height: auto;  /* Tự động điều chỉnh chiều cao theo tỉ lệ gốc của ảnh */
+    border-radius: 8px;  /* Bo góc ảnh */
+    object-fit: cover;  /* Đảm bảo ảnh không bị méo */
+    margin-bottom: 20px;  /* Tạo khoảng cách giữa ảnh và tiêu đề */
+  
+    /* Căn giữa ảnh */
+    display: block;  /* Chuyển ảnh thành block để dễ căn giữa */
+    margin-left: auto;  /* Tự động căn trái */
+    margin-right: auto;  /* Tự động căn phải */
+    
+    /* Thêm hiệu ứng shadow và chuyển động khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
